@@ -1,0 +1,27 @@
+@startuml
+Solution41 o-- FileReaderForNames
+Solution41 o-- NameSorter
+Solution41 o-- FileWriterForNames
+FileReaderForNames <|-- AbstractFileAccessorForNames
+FileWriterForNames <|-- AbstractFileAccessorForNames
+class Solution41 {
+    private static final Path rootPath = "$PROJECT_DIR$"
+}
+
+abstract class AbstractFileAccessorForNames {
+    protected File fileToAccess;
+    protected List<String> arrayListToAccess;
+}
+
+class FileReaderForNames {
+    public void readFromFile()
+}
+
+class NameSorter {
+    public void sortNames()
+}
+
+class FileWriterForNames {
+    public void writeToFile()
+}
+@enduml
