@@ -12,4 +12,8 @@ final class NameSorter {
     public NameSorter(List<String> inArrayList) {
         //Set arrayListToSort to inArrayList.
     }
+
+    public void sortNames() {
+        //Simply use arrayListToSort.sort(). No need to reinvent the wheel!
+    }
 }

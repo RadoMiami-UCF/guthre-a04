@@ -13,8 +13,12 @@ public class Solution41 {
     private FileWriterForNames fileWriter = new FileWriterForNames(listOfNames);
     public static void main(String[] args) {
         //First, create an instance of Solution41.
+        Solution41 app = new Solution41();
         //Then, read a list of names using fileReader.readNames(), storing them to listOfNames.
+        app.fileReader.readFromFile();
         //Then, use nameSorter.sortNames() to sort the names in listOfNames.
+        app.nameSorter.sortNames();
         //Finally, use fileWriter.writeNames() store the names to the file.
+        app.fileWriter.writeToFile();
     }
 }
