@@ -1,6 +1,5 @@
 @startuml
 Solution41 o-- FileReaderForNames
-Solution41 o-- NameSorter
 Solution41 o-- FileWriterForNames
 FileReaderForNames <|-- AbstractFileAccessorForNames
 FileWriterForNames <|-- AbstractFileAccessorForNames
@@ -15,10 +14,6 @@ abstract class AbstractFileAccessorForNames {
 
 class FileReaderForNames {
     public void readFromFile()
-}
-
-class NameSorter {
-    public void sortNames()
 }
 
 class FileWriterForNames {
