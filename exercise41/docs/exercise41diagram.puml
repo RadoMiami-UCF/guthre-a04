@@ -7,7 +7,7 @@ class Solution41 {
     private static final Path rootPath = "$PROJECT_DIR$"
 }
 
-abstract class AbstractFileAccessorForNames {
+class AbstractFileAccessorForNames {
     protected File fileToAccess;
     protected List<String> arrayListToAccess;
 }
