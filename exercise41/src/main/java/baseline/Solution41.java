@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Solution41 {
-    private ArrayList<String> listOfNames = new ArrayList<>();
+    private final ArrayList<String> listOfNames = new ArrayList<>();
     private final FileReaderForNames fileReader = new FileReaderForNames(listOfNames);
     private final FileWriterForNames fileWriter = new FileWriterForNames(listOfNames);
     public static void main(String[] args) {
