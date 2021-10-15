@@ -1,0 +1,18 @@
+@startuml
+Solution43 o-- WebsiteBuilder
+
+class Solution43 {
+-askForAndReturnString()
+}
+
+class WebsiteBuilder {
+-{static}final String DEFAULT_PATH_TO_WEBSITE_LOCATION
+-String pathToWebsiteLocation
+-String siteName
+-String authorName
+-boolean wantsJavaScriptFolder
+-boolean wantsCSSFolder
++createDirectories()
+-makeHTML()
+}
+@enduml
