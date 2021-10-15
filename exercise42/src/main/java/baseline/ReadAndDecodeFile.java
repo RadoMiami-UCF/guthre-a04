@@ -47,14 +47,12 @@ final class ReadAndDecodeFile extends FileAccessor {
         }
     }
 
-    public static EmployeeData decodeData(String dataString) {
+    private static EmployeeData decodeData(String dataString) {
         //First, take in a known good string an argument.
         //Then, use the commas to split it into three pieces.
         String[] splitString = dataString.split(",");
         //Finally, return an EmployeeData object with the firstName, lastName, and salary of the EmployeeData object to
         //their respective values.
-        System.out.print("EmployeeData created with last name " + splitString[0] + ", first name " + splitString[1]
-                + ", and salary " + splitString[INDEX_OF_SALARY_IN_ARRAY]);
         return new EmployeeData(splitString[0], splitString[1],
                 Double.parseDouble(splitString[INDEX_OF_SALARY_IN_ARRAY]));
     }

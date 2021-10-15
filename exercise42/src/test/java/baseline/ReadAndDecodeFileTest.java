@@ -19,6 +19,7 @@ class ReadAndDecodeFileTest {
                 new EmployeeData("Tim", "White", 3)), testEmployeeArray,
                 "testEmployeeArray not properly updated to file's contents!");
     }
+    /* This test was commented out because it refers to a now private method. Make the method public to use the test!
     @Test
     void testDecodeData() {
         assertEquals(new EmployeeData("Bob", "Chris", 12),
@@ -30,5 +31,5 @@ class ReadAndDecodeFileTest {
         assertEquals(new EmployeeData("SomeoneWith", "AReasonableSalary", 70000),
                 ReadAndDecodeFile.decodeData("SomeoneWith,AReasonableSalary,70000"),
                 "Returned EmployeeData does not match expectations #3");
-    }
+    }*/
 }
