@@ -6,7 +6,7 @@ public class Solution42 {
     //First, create an arrayList of objects used to store employee data (the first name, last name, and salary).
     private final ArrayList<EmployeeData> employeeDataArrayList = new ArrayList<>();
     //Then, create an instance of the classes used to decode input and format output with the arrayList.
-    private final TakeInputFromFile input = new TakeInputFromFile(employeeDataArrayList);
+    private final ReadAndDecodeFile input = new ReadAndDecodeFile(employeeDataArrayList);
     private final OutputToFile output = new OutputToFile(employeeDataArrayList);
     public static void main(String[] args) {
         //First, create an instance of Solution42.

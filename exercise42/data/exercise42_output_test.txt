@@ -1,0 +1,4 @@
+Last  First  Salary
+-------------------
+A     B      $18.42
+See   Dee    $12.34

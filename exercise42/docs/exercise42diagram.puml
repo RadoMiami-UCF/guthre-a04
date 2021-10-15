@@ -1,46 +1,39 @@
 @startuml
-Solution42 o-- TakeInputFromFile
+Solution42 o-- ReadAndDecodeFile
 Solution42 o-- OutputToFile
-TakeInputFromFile <|-- AccessFile
-OutputToFile <|-- AccessFile
+AccessFile <|-- ReadAndDecodeFile
+AccessFile <|-- OutputToFile
 AccessFile o-- EmployeeData
 Solution42 o-- EmployeeData
-TakeInputFromFile o-- DecodeEmployeeData
 
 class Solution42 {
-private ArrayList<EmployeeData> employeeList
-private TakeInputFromFile input
-private OutputToFile output
-public static void main(String[] args)
+-ArrayList<EmployeeData> employeeList
+-ReadAndDecodeFile input
+-OutputToFile output
++static void main(String[] args)
 }
 
-class TakeInputFromFile {
-private static final String DEFAULT_INPUT_PATH
-readData()
+class ReadAndDecodeFile {
+-static final String DEFAULT_INPUT_PATH
++readData()
++static EmployeeData decodeData(String encodedData)
 }
 
 class OutputToFile {
-private static final String DEFAULT_OUTPUT_PATH
-writeData()
+-static final String DEFAULT_OUTPUT_PATH
++writeData()
 }
 
 class AccessFile {
-protected Path pathToFile
-protected ArrayList<EmployeeData> inEmployeeList
-}
-
-class DecodeEmployeeData {
-public static EmployeeData decodeData(String encodedData)
+#Path pathToFile
+#ArrayList<EmployeeData> inEmployeeList
 }
 
 class EmployeeData {
-String firstName
-String lastName
-double salary
++String firstName
++String lastName
++double salary
 }
-
-note right of EmployeeData::firstName
-    This is actually a record, but records don't exist in PlantUML.
-end note
+note bottom: This is actually a record, but records don't exist in PlantUML.
 
 @enduml
