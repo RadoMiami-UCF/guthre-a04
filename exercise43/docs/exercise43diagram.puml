@@ -2,17 +2,24 @@
 Solution43 o-- WebsiteBuilder
 
 class Solution43 {
--askForAndReturnString()
+-{static} final Scanner in
+-final String siteName
+-final String author
+-final boolean wantsJavaScriptFolder
+-final boolean wantsCSSFolder
+-{static} String askThenReturnString()
+-{static} boolean askThenReturnBoolean()
 }
 
 class WebsiteBuilder {
--{static}final String DEFAULT_PATH_TO_WEBSITE_LOCATION
--String pathToWebsiteLocation
--String siteName
--String authorName
--boolean wantsJavaScriptFolder
--boolean wantsCSSFolder
-+createDirectories()
--makeHTML()
+-final Path htmlPath
+-final Path pathToWebsite
+-final String siteName
+-final String authorName
+-final boolean wantsJavaScriptFolder
+-final boolean wantsCSSFolder
++void buildWebsite()
+-{static}void sayCreatedDirectory()
+-void makeHTML()
 }
 @enduml
