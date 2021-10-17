@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Kimari Guthre
+ */
 package baseline;
 
 import java.util.ArrayList;
@@ -9,7 +13,7 @@ public class ProductList {
 
     public ProductList(List<Product> inProductList) {
         //Simply set products to inProductList.
-        this.products = inProductList;
+        this.products = new ArrayList<>(inProductList);
     }
 
     public List<Product> getList() {
