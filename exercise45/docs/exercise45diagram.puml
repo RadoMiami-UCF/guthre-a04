@@ -5,8 +5,9 @@ Solution45 o-- FileWriter
 class Solution45 {
 -{static} final Scanner in
 -{static} final Path PATH_TO_READ_FROM
+-{static} final String ROOT_PATH_TO_WRITE_TO
 +void main()
--{static} safeGetPath()
+-{static} safeGetPath(String userString)
 }
 
 class WordReplacer {
