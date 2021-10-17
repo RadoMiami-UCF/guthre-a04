@@ -1,0 +1,21 @@
+@startuml
+Solution45 o-- WordReplacer
+Solution45 o-- FileWriter
+
+class Solution45 {
++void main()
+}
+
+class WordReplacer {
+-{static} final String WORD_TO_REPLACE
+-{static} final String WORD_TO_REPLACE_WITH
+-final String stringToModify
++String replaceWordsInString()
+}
+
+class FileWriter {
+-final Path pathToWriteTo;
+-final String stringToWrite;
++void writeFile()
+}
+@enduml
