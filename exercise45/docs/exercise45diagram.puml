@@ -3,7 +3,10 @@ Solution45 o-- WordReplacer
 Solution45 o-- FileWriter
 
 class Solution45 {
+-{static} final Scanner in
+-{static} final Path PATH_TO_READ_FROM
 +void main()
+-{static} safeGetPath()
 }
 
 class WordReplacer {
