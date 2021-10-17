@@ -5,24 +5,27 @@ Solution44 o-- JsonParser
 JsonParser o-- ProductList
 
 class Solution44 {
+-{static} final Scanner in
+-{static} final String DEFAULT_JSON_PATH
 -ArrayList<Product> productList
--ProductSearcher productSearcher
--JsonParser jsonParser
+-final ProductSearcher productSearcher
+-final JsonParser jsonParser
++void main()
 }
 
 class JsonParser {
--ProductList listToWriteTo
--Path pathToJson
+-final ProductList products
+-final Path pathToJson
 +List<Product> readJson()
 }
 
 class ProductSearcher {
--List<Product> productList
+-final List<Product> productList
 +boolean searchProducts(String searchString)
 }
 
 class ProductList {
--List<Product> products;
+-final List<Product> products;
 +List<Product> getList()
 }
 
