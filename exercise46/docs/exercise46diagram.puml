@@ -1,0 +1,32 @@
+@startuml
+Solution46 o-- CreateHistogram
+Solution46 o-- WordAndQuantity
+Solution46 o-- WordFileReader
+CreateHistogram o-- WordAndQuantity
+WordFileReader o-- WordAndQuantity
+
+class Solution46 {
+-ArrayList<WordAndQuantity> wordArray
+-{static}final Path INPUT_FILE_PATH
++void main()
+}
+
+class WordAndQuantity {
+-final String name
+-int quantity
++int quantity()
++int name()
++void incrementQuantity()
+}
+
+class WordFileReader {
+-final List<WordAndQuantity> wordListToWriteTo
+-final Path pathToReadFrom
++void fillWordList()
+}
+
+class CreateHistogram {
+-final List<WordAndQuantity> wordListToReadFrom
++void createHistogram()
+}
+@enduml
