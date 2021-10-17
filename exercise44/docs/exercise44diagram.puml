@@ -1,0 +1,34 @@
+@startuml
+Solution44 o-- Product
+Solution44 o-- ProductSearcher
+Solution44 o-- JsonParser
+JsonParser o-- ProductList
+
+class Solution44 {
+-ArrayList<Product> productList
+-ProductSearcher productSearcher
+-JsonParser jsonParser
+}
+
+class JsonParser {
+-ProductList listToWriteTo
+-Path pathToJson
++List<Product> readJson()
+}
+
+class ProductSearcher {
+-List<Product> productList
++boolean searchProducts(String searchString)
+}
+
+class ProductList {
+-List<Product> products;
++List<Product> getList()
+}
+
+class Product {
++String name
++double price
++int quantity
+}
+@enduml
