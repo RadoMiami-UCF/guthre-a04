@@ -9,17 +9,17 @@ import java.util.ArrayList;
 
 public class Solution46 {
     private static final Path INPUT_FILE_PATH = Path.of("data/exercise46_input.txt");
-    private final ArrayList<WordAndQuantity> wordArray = new ArrayList<>();
+    private ArrayList<WordAndQuantity> wordArray = new ArrayList<>();
     private final WordFileReader fileReader = new WordFileReader(this.wordArray, INPUT_FILE_PATH);
-    private final CreateHistogram histogramCreator = new CreateHistogram(this.wordArray);
 
     public static void main(String[] args) {
         //First, create an instance of Solution46 named app.
         var app = new Solution46();
         //Then, use app.fileReader.fillWordList() to fill wordArray with the words and their quantities.
-        app.fileReader.fillWordList();
+        app.wordArray = (ArrayList<WordAndQuantity>) app.fileReader.fillWordList();
         /*Finally, use app.histogramCreator.createHistogram() to print a histogram containing the words and their
         quantities to the screen.*/
-        app.histogramCreator.createHistogram();
+        var histogramCreator = new CreateHistogram(app.wordArray);
+        histogramCreator.createHistogram();
     }
 }

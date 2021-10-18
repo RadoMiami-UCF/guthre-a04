@@ -4,6 +4,7 @@
  */
 package baseline;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CreateHistogram {
@@ -11,7 +12,7 @@ public class CreateHistogram {
     private final List<WordAndQuantity> wordListToReadFrom;
 
     public CreateHistogram(List<WordAndQuantity> wordListToReadFromIn) {
-        this.wordListToReadFrom = wordListToReadFromIn;
+        this.wordListToReadFrom = new ArrayList<>(wordListToReadFromIn);
     }
 
     public void createHistogram() {

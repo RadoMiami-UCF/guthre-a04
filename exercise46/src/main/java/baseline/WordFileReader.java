@@ -7,6 +7,7 @@ package baseline;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.logging.Level;
@@ -19,11 +20,11 @@ public class WordFileReader {
     private final Path pathToReadFrom;
 
     public WordFileReader(List<WordAndQuantity> wordListToWriteToIn, Path pathToReadFromIn) {
-        this.wordListToWriteTo = wordListToWriteToIn;
+        this.wordListToWriteTo = new ArrayList<>(wordListToWriteToIn);
         this.pathToReadFrom = pathToReadFromIn;
     }
 
-    public void fillWordList() {
+    public List<WordAndQuantity> fillWordList() {
         //First, write the file at pathToReadFrom to a string.
         var wordListString = "";
         try {
@@ -39,6 +40,7 @@ public class WordFileReader {
                 addOrIncrementWord(wordString);
             }
         }
+        return new ArrayList<>(this.wordListToWriteTo);
     }
 
     private void addOrIncrementWord(String wordString) {

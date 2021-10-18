@@ -17,7 +17,7 @@ class WordFileReaderTest {
     void testFillWordList() {
         ArrayList<WordAndQuantity> wordArray = new ArrayList<>();
         var testReader = new WordFileReader(wordArray, Path.of("data/unittests/exercise46_input_test.txt"));
-        testReader.fillWordList();
+        wordArray = (ArrayList<WordAndQuantity>) testReader.fillWordList();
         assertArrayEquals(new WordAndQuantity[]{new WordAndQuantity("yellow", 5),
         new WordAndQuantity("black", 5), new WordAndQuantity("ooh", 1),
         new WordAndQuantity("and", 1), new WordAndQuantity("let's", 1),
